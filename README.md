@@ -1,5 +1,8 @@
 # nasa2022
 
+https://dxdr-ai.herokuapp.com/request (Advised by Mark Chen)
+https://dxdr-ai.herokuapp.com/search?q=asteroid
+
 ```
 API
 ┌── config.py // SETTING THE ENVIRONMENTAL VARIABLES
@@ -11,3 +14,4 @@ API
 │
 └── run.py  // THE ACCESS POINT OF PROGRAM
 ```
+
