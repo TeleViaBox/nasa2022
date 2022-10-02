@@ -1,12 +1,16 @@
 import pickle
 import gzip
 
-with open('./nasa_data.pickle', 'rb') as f:
-    myModel = pickle.load(f)
+# with open('./model/xgboost-iris.pgz', 'rb') as f:
+#     myModel = pickle.load(f)
     
-# with gzip.open('./model/nasa_data.pgz', 'r') as f:
+# with gzip.open('./model/xgboost-iris.pgz', 'r') as f:
 #     model = pickle.load(f)
 
+with gzip.open('app/model/xgboost-iris.pgz', 'r') as f:
+    myModel = pickle.load(f)
+
 def predict(input):
-    ...
-    return myOutput
+    pred = myModel.predict(input)[0]
+    print(pred)
+    return pred

@@ -1,0 +1,31 @@
+(base) C:\Users\user\ALEXLEE\nasa2022\nasa2022>python run.py
+Traceback (most recent call last):
+  File "run.py", line 2, in <module>
+    from app import app
+  File "C:\Users\user\ALEXLEE\nasa2022\nasa2022\app\__init__.py", line 2, in <module>
+    import app.model as model
+  File "C:\Users\user\ALEXLEE\nasa2022\nasa2022\app\model.py", line 7, in <module>
+    with gzip.open('./model/xgboost-iris.pgz', 'r') as f:
+  File "C:\Users\user\Anaconda3\lib\gzip.py", line 53, in open
+    binary_file = GzipFile(filename, gz_mode, compresslevel)
+  File "C:\Users\user\Anaconda3\lib\gzip.py", line 163, in __init__
+    fileobj = self.myfileobj = builtins.open(filename, mode or 'rb')
+FileNotFoundError: [Errno 2] No such file or directory: './model/xgboost-iris.pgz'
+
+(base) C:\Users\user\ALEXLEE\nasa2022\nasa2022>python run.py
+C:\Users\user\Anaconda3\lib\site-packages\pandas\compat\_optional.py:138: UserWarning: Pandas requires version '2.7.0' or newer of 'numexpr' (version '2.6.9' currently installed).
+  warnings.warn(msg, UserWarning)
+C:\Users\user\Anaconda3\lib\site-packages\sklearn\base.py:315: UserWarning: Trying to unpickle estimator LabelEncoder from version 1.0.2 when using version 0.24.2. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+Traceback (most recent call last):
+  File "run.py", line 2, in <module>
+    from app import app
+  File "C:\Users\user\ALEXLEE\nasa2022\nasa2022\app\__init__.py", line 16, in <module>
+    @app.route('/test', method = ['GET'])
+  File "C:\Users\user\Anaconda3\lib\site-packages\flask\app.py", line 1314, in decorator
+    self.add_url_rule(rule, endpoint, f, **options)
+  File "C:\Users\user\Anaconda3\lib\site-packages\flask\app.py", line 98, in wrapper_func
+    return f(self, *args, **kwargs)
+  File "C:\Users\user\Anaconda3\lib\site-packages\flask\app.py", line 1274, in add_url_rule
+    rule = self.url_rule_class(rule, methods=methods, **options)
+TypeError: __init__() got an unexpected keyword argument 'method'
